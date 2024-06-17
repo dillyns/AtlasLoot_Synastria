@@ -214,6 +214,21 @@
 					</Anchors>
 				</FontString>
 			</Layer>
+			<Layer level="OVERLAY">
+				<Texture name="$parent_Attuned" hidden="true">
+					<Size>
+						<AbsDimension x="5" y="5"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+                            <Offset>
+                                <AbsDimension x="1" y="-20"/>
+                            </Offset>
+                        </Anchor>
+					</Anchors>
+					<Color r="1" g="1" b="1" a="1"/>
+				</Texture>
+			</Layer>
             <Layer level="BACKGROUND">
                 <Texture name="$parent_Unsafe" hidden="true">
                     <Size>

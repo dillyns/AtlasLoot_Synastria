@@ -33,6 +33,7 @@ AtlasLoot = LibStub("AceAddon-3.0"):NewAddon("AtlasLoot");
 --Instance required libraries
 local BabbleBoss = AtlasLoot_GetLocaleLibBabble("LibBabble-Boss-3.0")
 local AL = LibStub("AceLocale-3.0"):GetLocale("AtlasLoot");
+local SynastriaCoreLib = LibStub("SynastriaCoreLib-1.0");
 
 --Establish version number and compatible version of Atlas
 local VERSION_MAJOR = "5";
@@ -547,7 +548,7 @@ It is the workhorse of the mod and allows the loot tables to be displayed any wa
 function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 	--Set up local variables needed for GetItemInfo, etc
 	local itemName, itemLink, itemQuality, itemLevel, itemType, itemSubType, itemCount, itemEquipLoc, itemTexture, itemColor;
-	local iconFrame, nameFrame, extraFrame, itemButton;
+	local iconFrame, nameFrame, extraFrame, itemButton, attunedOverlay;
 	local text, extra;
 	local wlPage, wlPageMax = 1, 1;
 	local isItem;
@@ -697,6 +698,7 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
 				iconFrame  = getglobal("AtlasLootItem_"..dataSource[dataID][i][1].."_Icon");
 				nameFrame  = getglobal("AtlasLootItem_"..dataSource[dataID][i][1].."_Name");
 				extraFrame = getglobal("AtlasLootItem_"..dataSource[dataID][i][1].."_Extra");
+				attunedOverlay = getglobal("AtlasLootItem_"..dataSource[dataID][i][1].."_Attuned");
 
 				--If there is no data on the texture an item should have, show a big red question mark
 				if dataSource[dataID][i][3] == "?" then
@@ -780,6 +782,20 @@ function AtlasLoot_ShowItemsFrame(dataID, dataSource, boss, pFrame)
                 end
 				itemButton.i = 1;
 				itemButton:Show();
+
+				local parsedItemID = tonumber(itemButton.iteminfo.idcore)
+				if SynastriaCoreLib.IsAttunableBySomeone(parsedItemID) then
+					if SynastriaCoreLib.IsAttuned(parsedItemID) then
+						attunedOverlay:SetVertexColor(0,1,0)
+					elseif SynastriaCoreLib.IsAttunable(parsedItemID) then
+						attunedOverlay:SetVertexColor(1,1,0)
+					else 
+						attunedOverlay:SetVertexColor(1,0,0)
+					end	
+					attunedOverlay:Show()
+				else
+					attunedOverlay:Hide()
+				end
                 
                 if dataSource[dataID][i][2] == 0 then getglobal("AtlasLootItem_"..i.."_Unsafe"):Hide(); end
             end
