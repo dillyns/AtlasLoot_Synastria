@@ -233,6 +233,7 @@ if AL then
 	AL["Ranged weapons:"] = true;
 	AL["Relics:"] = true;
 	AL["Other:"] = true;
+	AL["Attuned"] = true;
 
 	-- Wishlist
 	AL["Close"] = true;
