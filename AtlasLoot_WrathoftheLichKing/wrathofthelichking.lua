@@ -425,9 +425,10 @@ local BabbleZone = AtlasLoot_GetLocaleLibBabble("LibBabble-Zone-3.0")
 		{ 4, 35630, "", "=q3=Summoner's Stone Gavel", "=ds=#h1#, #w6#", "", "30%"};
 		{ 16, 0, "INV_Box_01", "=q6=#j3#", ""};
 		{ 17, 47241, "", "=q4=Emblem of Triumph", "=ds=#e15#", "", "100%"};
-		{ 18, 37722, "", "=q3=Breastplate of Undeath", "=ds=#s5#, #a4#", "", "22%"};
-		{ 19, 37718, "", "=q3=Temple Crystal Fragment", "=ds=#s15#", "", "21%"};
-		{ 20, 37721, "", "=q3=Cursed Lich Blade", "=ds=#h3#, #w10#", "", "22%"};
+		{ 18, 40490, "", "=q3=Necromantic Wristguards", "=ds=#s8#, #a3#", "", "25%"};
+		{ 19, 37722, "", "=q3=Breastplate of Undeath", "=ds=#s5#, #a4#", "", "22%"};
+		{ 20, 37718, "", "=q3=Temple Crystal Fragment", "=ds=#s15#", "", "21%"};
+		{ 21, 37721, "", "=q3=Cursed Lich Blade", "=ds=#h3#, #w10#", "", "22%"};
 		Prev = "DrakTharonKeepTrollgore";
 		Next = "DrakTharonKeepKingDred";
 	};
