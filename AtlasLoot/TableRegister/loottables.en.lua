@@ -1794,3 +1794,11 @@ end
 	AtlasLoot_TableNames["EmptyTable"] = { AL["Select a Loot Table..."], "Menu" };
 	AtlasLoot_TableNames["EmptyInstance"] = { "AtlasLoot", "AtlasLootFallback" };
 	AtlasLoot_TableNames["AtlasLootFallback"] = { "AtlasLoot", "AtlasLootFallback" };
+
+-----------------
+--- Synastria ---
+-----------------
+	-- Auch: Auchenai Crypts Mythic
+	AtlasLoot_TableNames["AuchCryptsShirrakMythic"] = { BabbleBoss["Shirrak the Dead Watcher"], "AtlasLootSynastria" };
+	AtlasLoot_TableNames["AuchCryptsExarchMythic"] = { BabbleBoss["Exarch Maladaar"], "AtlasLootSynastria" };
+	AtlasLoot_TableNames["AuchCryptsAvatarMythic"] = { AL["Avatar of the Martyred"], "AtlasLootSynastria" };

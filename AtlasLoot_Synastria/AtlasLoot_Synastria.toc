@@ -1,0 +1,17 @@
+## Interface: 30300
+## Title: AtlasLoot_Synastria
+## Notes: AtlasLoot loot tables for Synastria
+## Author: dillyns
+## Version: v5.11.04
+## X-eMail: manager@atlasloot.net
+## X-Category: Map
+## X-License: GPL v2
+## X-Website: http://www.atlasloot.net
+## Dependencies: AtlasLoot
+## LoadOnDemand: 1
+## X-Curse-Packaged-Version: v5.11.04
+## X-Curse-Project-Name: Atlasloot Enhanced
+## X-Curse-Project-ID: atlasloot-enhanced
+## X-Curse-Repository-ID: wow/atlasloot-enhanced/mainline
+
+synastria.lua

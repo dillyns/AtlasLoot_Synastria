@@ -254,6 +254,48 @@ AtlasLoot_DewDropDown = {
 	[9] = {
 		{ AL["World Events"], "WORLDEVENTMENU", "Table" },
 	},
+	[10] = {
+		["Synastria"] = {
+			[1] = {
+				[BabbleZone["Auchindoun"]] = {
+					{ BabbleZone["Mana-Tombs"], "AuchManaTombs", "Submenu" },
+					{ BabbleZone["Auchenai Crypts"], "AuchCryptsMythic", "Submenu" },
+					{ BabbleZone["Sethekk Halls"], "AuchSethekk", "Submenu" },
+					{ BabbleZone["Shadow Labyrinth"], "AuchShadowLab", "Submenu" },
+				}, 
+			},
+			[2] = {
+				[BabbleZone["Caverns of Time"]] = {
+					{ BabbleZone["Old Hillsbrad Foothills"], "CoTOldHillsbrad", "Submenu" },
+					{ BabbleZone["The Black Morass"], "CoTBlackMorass", "Submenu" },
+				},
+			},
+			[3] = {
+				[BabbleZone["Coilfang Reservoir"]] = {
+					{ BabbleZone["The Slave Pens"], "CFRSlavePens", "Submenu" },
+					{ BabbleZone["The Underbog"], "CFRUnderbog", "Submenu" },
+					{ BabbleZone["The Steamvault"], "CFRSteamvault", "Submenu" },
+				},
+			},
+			[4] = {
+				[BabbleZone["Hellfire Citadel"]] = {
+					{ BabbleZone["Hellfire Ramparts"], "HCRamparts", "Submenu" },
+					{ BabbleZone["The Blood Furnace"], "HCFurnace", "Submenu" },
+					{ BabbleZone["The Shattered Halls"], "HCShatteredHalls", "Submenu" },
+				}, 
+			},
+			[5] = {
+				{ BabbleZone["Magisters' Terrace"], "MagistersTerrace", "Submenu" },
+			},
+			[6] = {
+				[BabbleZone["Tempest Keep"]] = {
+					{ BabbleZone["The Mechanar"], "TKMech", "Submenu" },
+					{ BabbleZone["The Botanica"], "TKBot", "Submenu" },
+					{ BabbleZone["The Arcatraz"], "TKArc", "Submenu" },
+				},
+			},
+		},
+	},
 };
 
 --This table defines all the subtables needed for the full menu
@@ -573,6 +615,11 @@ AtlasLoot_DewDropDown_SubTables = {
 		{ "", "AuchCryptsExarch" },
 		{ "", "AuchCryptsAvatar" },
 		{ AL["Trash Mobs"], "AuchTrash" },
+	},
+	["AuchCryptsMythic"] = {
+		{ "", "AuchCryptsShirrakMythic" },
+		{ "", "AuchCryptsExarchMythic" },
+		{ "", "AuchCryptsAvatarMythic" },
 	},
 	["AuchSethekk"] = {
 		{ "", "AuchSethekkDarkweaver" },

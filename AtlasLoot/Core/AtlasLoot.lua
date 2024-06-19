@@ -1287,6 +1287,8 @@ function AtlasLoot_GetLODModule(dataSource)
 		return "AtlasLoot_WorldEvents";
 	elseif (dataSource=="AtlasLootWotLK") then
 		return "AtlasLoot_WrathoftheLichKing";
+	elseif (dataSource=="AtlasLootSynastria") then
+		return "AtlasLoot_Synastria";
 	end
 end
 
@@ -1301,6 +1303,7 @@ function AtlasLoot_LoadAllModules()
     craft, _ = LoadAddOn("AtlasLoot_Crafting");
     world, _ = LoadAddOn("AtlasLoot_WorldEvents");
     wotlk, _ = LoadAddOn("AtlasLoot_WrathoftheLichKing");
+	synastria, _ = LoadAddOn("AtlasLoot_Synastria");
     local flag=0;
 	if not orig then
 		LoadAddOn("AtlasLoot_OriginalWoW");
@@ -1320,6 +1323,10 @@ function AtlasLoot_LoadAllModules()
 	end
     if not wotlk then
 		LoadAddOn("AtlasLoot_WrathoftheLichKing");
+		flag=1;
+	end
+	if not synastria then
+		LoadAddOn("AtlasLoot_Synastria");
 		flag=1;
 	end
 	if flag == 1 then
